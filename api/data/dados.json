@@ -41,6 +41,13 @@
       "ativo": true,
       "email": "m@m.com",
       "role": 2
+    },
+    {
+      "nome": "Jonatas",
+      "ativo": true,
+      "email": "jon@gmail.com",
+      "role": 2,
+      "id": 7
     }
   ],
   "roles": [
