@@ -48,6 +48,19 @@
       "email": "jon@gmail.com",
       "role": 2,
       "id": 7
+    },
+    {
+      "nome": "Jon",
+      "ativo": true,
+      "role": 1,
+      "id": 8
+    },
+    {
+      "nome": "Brandao",
+      "ativo": true,
+      "role": 1,
+      "createAt": "2022-05-31T00:00:00.000Z",
+      "id": 9
     }
   ],
   "roles": [
