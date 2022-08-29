@@ -12,7 +12,7 @@ const server = new ApolloServer({
   resolvers,
   dataSources: () => {
     return {
-      usersAPI: new UsersAPI()
+      usersAPI: new UsersAPI() // Instanciando endpoints com o datasources, faz a logica para conectar com endpoints
     }
   }
 });

@@ -1,6 +1,15 @@
-const { GraphQLScalaType, GraphQLScalarType } = require('graphql');
+const { GraphQLScalarType } = require('graphql');
 
 const userResolvers = {
+  RolesType: {
+    WAITER : "WAITER",
+    BARISTA : "BARISTA",
+    KITCHENPORTER: "KITCHEN PORTER",
+    BARTENDER: "BARTENDER",
+    HOUSEKEEPING: "HOUSE KEEPING",
+    SECURITY: "SECURITY",
+    CLEANER: "CLEANER"
+  },
   DateTime: new GraphQLScalarType({
     name: 'DateTime',
     description: 'string de data e hora no formato ISO-8601',
@@ -10,18 +19,19 @@ const userResolvers = {
   }),
   Query: {
     users: (root, args, { dataSources }, info ) => 
-    dataSources.usersAPI.getUsers(),
-    user: (root, { id }, { dataSources }) => dataSources.usersAPI.getUserById(id)
+      dataSources.usersAPI.getUsers(),
+    user: (root, { id }, { dataSources }) => 
+      dataSources.usersAPI.getUserById(id)
   },
   Mutation: {
     adicionaUser: async (root, user, { dataSources }) =>
-    dataSources.usersAPI.adicionaUser(user),
+      dataSources.usersAPI.adicionaUser(user),
 
     atualizaUser: async (root, novosDados, { dataSources }) => 
-    dataSources.usersAPI.atualizaUser(novosDados),
+      dataSources.usersAPI.atualizaUser(novosDados),
 
     deletaUser: async (root, { id }, { dataSources }) => 
-    dataSources.usersAPI.deletaUser(id)
+      dataSources.usersAPI.deletaUser(id)
   }
 }
 
